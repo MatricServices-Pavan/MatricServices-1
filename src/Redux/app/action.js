@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as types from "./actionTypes";
 
-const api = `https://matricservices-backend.onrender.com`;
+const api = `https://matricservices-backend.onrender.com/api`;
 
 // const api = `http://localhost:2345/api`;
 
