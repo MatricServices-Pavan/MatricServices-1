@@ -59,7 +59,7 @@ const Projectform = () => {
     
     // Prepare data for EmailJS
     const templateParams = {
-      to_name: "pavanmatricservices@gmail.com",
+      to_name: "contact@matricservices.com",
       from_name: formdata.Name,
       name: formdata.Name,
       phone: formdata.Phone,
