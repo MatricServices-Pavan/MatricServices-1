@@ -64,7 +64,7 @@ const Workshopform = () => {
     
     // Prepare data for EmailJS
     const templateParams = {
-      to_name: "contact@matricservices.com", 
+      to_name: "pavanmatricservices@gmail.com", 
       from_name: formdata.Name,
       name: formdata.Name,
       phone: formdata.Phone,
