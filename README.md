@@ -23,7 +23,7 @@ This website acts as a platform offering:
 
 ### 1. Clone the Repository
 
-git clone https://github.com/your-username/matric-services-frontend.git
+git clone https://github.com/your-username/MatricServices-1.git
 cd matric-services-frontend
 
 > Replace `your-username` with your actual GitHub username.
