@@ -14,7 +14,8 @@ This website acts as a platform offering:
 
 - Framework: React.js  
 - UI Library: Chakra UI
-- Routing: React Router DOM 
+- Routing: React Router DOM
+- State Management Library-Redux
 
 
 
