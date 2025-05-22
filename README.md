@@ -10,7 +10,7 @@ This website acts as a platform offering:
 - Contact and gallery sections  
 
 
-## 🚀 Tech Stack Used
+## Tech Stack Used
 
 - Framework: React.js  
 - UI Library: Chakra UI
@@ -52,4 +52,4 @@ The browser should open automatically.
 
 www.matricservices.in
 
-Made with ❤️ by the Matric Services Team
+
