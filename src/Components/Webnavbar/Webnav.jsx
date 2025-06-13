@@ -6,8 +6,15 @@ import {
   VStack,
   HStack,
   Text,
- // Import useDisclosure
+  Menu, 
+  MenuButton, 
+  MenuList,
+  MenuItem, 
+  Button,
+  useDisclosure,
+  useMenuContext,
 } from "@chakra-ui/react";
+import { ChevronDownIcon, ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
 import { IoMdMenu, } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
@@ -130,22 +137,21 @@ const Webnav = () => {
               justifyContent="center"
               gap="5px"
               color="white"
-              cursor="pointer" // Change cursor to pointer
+              cursor="pointer"
             >
               <a
-                href="https://wa.me/919390555433"
-                target="_blank"
-                rel="noopener noreferrer"
+              href="https://wa.me/919390555433"
+              target="_blank"
+              rel="noopener noreferrer"
               >
-                <HStack spacing={2} alignItems="center">
-                  <FaWhatsapp cursor="pointer" />
-                  <Text>Chat Now</Text>
-                </HStack>
+              <HStack spacing={2} alignItems="center">
+                <FaWhatsapp fontSize="1.5rem" cursor="pointer" />
+              </HStack>
               </a>
             </Box>
-          </HStack>
+            </HStack>
 
-          {/* Desktop View */}
+            {/* Desktop View */}
           <Box
             display={{ base: "none", lg: "flex" }}
             w="full"
@@ -174,12 +180,131 @@ const Webnav = () => {
               <NavLink to="/about" style={navLinkStyle}>
                 <Box _hover={{ cursor: "pointer" }}>About Us</Box>
               </NavLink>
-              <NavLink to="/workshop" style={navLinkStyle}>
-                <Box _hover={{ cursor: "pointer" }}>Workshops</Box>
-              </NavLink>
-              <NavLink to="/projects" style={navLinkStyle}>
-                <Box _hover={{ cursor: "pointer" }}>Projects</Box>
-              </NavLink>
+<Menu>
+  {({ onClose }) => (
+    <>
+      <MenuButton
+        as={Button}
+        rightIcon={<ChevronDownIcon />}
+        variant="ghost"
+        fontWeight="700"
+        textTransform="uppercase"
+        fontSize="0.8rem"
+        transition="all 0.2s ease"
+        borderRadius="md"
+        px={4}
+        py={2}
+      >
+        Services
+      </MenuButton>
+      <MenuList
+        bg="white"
+        border="1px solid"
+        borderColor="gray.200"
+        borderRadius="lg"
+        boxShadow="lg"
+        py={1}
+        minW="200px"
+        zIndex={1000}
+        overflow="hidden"
+      >
+        
+      
+
+          <NavLink to="/webdevelopment" style={navLinkStyle}>
+          <MenuItem
+            fontWeight="700"
+            textTransform="uppercase"
+            fontSize="0.8rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={4}
+            py={2}
+            mx={0}
+            onClick={onClose} // Close the menu on click
+          >
+             Web Development
+          </MenuItem>
+        </NavLink>
+
+          <NavLink to="/appDev" style={navLinkStyle}>
+          <MenuItem
+            fontWeight="700"
+            textTransform="uppercase"
+            fontSize="0.8rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={4}
+            py={2}
+            mx={0}
+            onClick={onClose} // Close the menu on click
+          >
+            App Development
+          </MenuItem>
+        </NavLink>
+
+          <NavLink to="/digitalmarketing" style={navLinkStyle}>
+          <MenuItem
+            fontWeight="700"
+            textTransform="uppercase"
+            fontSize="0.8rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={4}
+            py={2}
+            mx={0}
+            onClick={onClose} // Close the menu on click
+          >
+            Digital Marketing
+          </MenuItem>
+        </NavLink>
+
+        <NavLink to="/workshop" style={navLinkStyle}>
+          <MenuItem
+            fontWeight="700"
+            textTransform="uppercase"
+            fontSize="0.8rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={4}
+            py={2}
+            mx={0}
+            onClick={onClose} // Close the menu on click
+          >
+            Workshops
+          </MenuItem>
+        </NavLink>
+
+          <NavLink to="/projects" style={navLinkStyle}>
+          <MenuItem
+            fontWeight="700"
+            textTransform="uppercase"
+            fontSize="0.8rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={4}
+            py={2}
+            mx={0}
+            onClick={onClose} // Close the menu on click
+          >
+            Projects
+          </MenuItem>
+        </NavLink>
+        
+      </MenuList>
+    </>
+  )}
+</Menu>
               <NavLink to="/products" style={navLinkStyle}>
                 <Box _hover={{ cursor: "pointer" }}>Products</Box>
               </NavLink>
@@ -250,29 +375,151 @@ const Webnav = () => {
             </Box>
             <VStack
               w="100%"
-              align="center"
+              align="flex-start"
+              pl={6}
               mt={8}
-              fontSize={"1.2rem"}
+              fontSize={"1rem"}
               fontWeight={500}
               spacing={2}
             >
              
               <NavLink to="/" style={navLinkStyle} onClick={toggleNav}>
-                <Box _hover={{ cursor: "pointer" }}>Home</Box>
+                <Box _hover={{ cursor: "pointer" }} textTransform="uppercase">Home</Box>
               </NavLink>
 
               <NavLink to="/about" style={navLinkStyle} onClick={toggleNav}>
-                <Box _hover={{ cursor: "pointer" }}>About Us</Box>
+                <Box _hover={{ cursor: "pointer" }} textTransform="uppercase">About Us</Box>
               </NavLink>
+<Menu closeOnSelect={false}>
+  {({ onClose, isOpen }) => (
+    <>
+      <MenuButton
+        as={Box} // Changed from Button to Box to remove button styling
+        fontSize="1rem" // Match other nav items
+        fontWeight={500} // Match other nav items
+        textTransform="uppercase" // Match other nav items
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        w="180px" // Keep width consistent
+        _hover={{ cursor: "pointer" }}
+      >
+        <HStack w="full">
+          <Text marginRight="20px">Services</Text>
+          {isOpen ? <ChevronDownIcon /> : <ChevronRightIcon />}
+        </HStack>
+      </MenuButton>
+      <MenuList
+        bg="white"
+        border="1px solid"
+        borderColor="gray.200"
+        borderRadius="lg"
+        boxShadow="lg"
+        py={1}
+        minW="200px"
+        zIndex={1000}
+        overflow="hidden"
+      >
+       
+      
 
-              <NavLink to="/workshop" style={navLinkStyle} onClick={toggleNav}>
-                <Box _hover={{ cursor: "pointer" }}>Workshops</Box>
-              </NavLink>
-              <NavLink to="/projects" style={navLinkStyle} onClick={toggleNav}>
-                <Box _hover={{ cursor: "pointer" }}>Projects</Box>
-              </NavLink>
+        <NavLink to="/webdevelopment" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+          <MenuItem
+            fontWeight={500}
+            textTransform="uppercase"
+            fontSize="1rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={3}
+            py={2}
+            mx={0}
+            pl={6}
+          >
+            Web Development
+          </MenuItem>
+        </NavLink>
+
+        <NavLink to="/appDev" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+          <MenuItem
+            fontWeight={500}
+            textTransform="uppercase"
+            fontSize="1rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={3}
+            py={2}
+            mx={0}
+            pl={6}
+          >
+            App Development
+          </MenuItem>
+        </NavLink>
+
+        <NavLink to="/digitalmarketing" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+          <MenuItem
+            fontWeight={500}
+            textTransform="uppercase"
+            fontSize="1rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={3}
+            py={2}
+            mx={0}
+            pl={6}
+          >
+            Digital Marketing
+          </MenuItem>
+        </NavLink>
+
+         <NavLink to="/workshop" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+          <MenuItem
+            fontWeight={500} // Match other nav items
+            textTransform="uppercase" // Match other nav items
+            fontSize="1rem" // Match other nav items
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={3}
+            py={2}
+            mx={0}
+            pl={6} // Indent to align with parent nav items
+          >
+            Workshops
+          </MenuItem>
+        </NavLink>
+
+
+          <NavLink to="/projects" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+          <MenuItem
+            fontWeight={500}
+            textTransform="uppercase"
+            fontSize="1rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={3}
+            py={2}
+            mx={0}
+            pl={6}
+          >
+            Projects
+          </MenuItem>
+        </NavLink>
+       
+      </MenuList>
+    </>
+  )}
+</Menu>
               <NavLink to="/products" style={navLinkStyle} onClick={toggleNav}>
-                <Box _hover={{ cursor: "pointer" }}>Products</Box>
+                <Box _hover={{ cursor: "pointer" }} textTransform="uppercase">Products</Box>
               </NavLink>
             </VStack>
           </Box>

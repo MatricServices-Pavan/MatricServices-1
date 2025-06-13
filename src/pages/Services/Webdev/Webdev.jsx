@@ -4,6 +4,7 @@ import Webdevabout from '../../../Components/Webdev/Webdevabout'
 import Webdevchooseus from '../../../Components/Webdev/Webdevchooseus'
 import Webdevservices from '../../../Components/Webdev/Webdevservices'
 import Webdevpricing from '../../../Components/Webdev/Webdevpricing'
+import Projectform from '../../../Components/Projects/Projectform'
 const Webdev = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const Webdev = () => {
     <Webdevchooseus/>
     <Webdevservices/>
     <Webdevpricing/>
+    <Projectform/>
     </>
   )
 }

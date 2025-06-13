@@ -1,105 +1,62 @@
-import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, UnorderedList, ListItem, theme } from "@chakra-ui/react";
 import React from "react";
-import theme from "../../theme";
 
-const whyChooseUs = [
-  {
-    title: "Data-Driven Strategies",
-    description:
-      "We base every campaign on in-depth analytics, market research, and performance metrics to ensure you get the best possible outcomes.",
-    icon: "📊",
-  },
-  {
-    title: "Certified Professionals",
-    description:
-      "Our team includes certified experts in Google Ads, Meta marketing, SEO, and more to ensure your campaigns are handled with precision.",
-    icon: "🎓",
-  },
-  {
-    title: "Transparent Reporting",
-    description:
-      "We provide detailed insights and real-time tracking so you always know how your campaigns are performing — no guesswork involved.",
-    icon: "📈",
-  },
-
+const whyChooseUsPoints = [
+  "Data-Driven Strategies: Every decision we make is backed by data analytics, industry trends, and user behavior insights to deliver measurable success.",
+  "Certified Professionals: Our team consists of Google Ads, Meta (Facebook), and SEO-certified experts who bring technical excellence to every project.",
+  "Transparent Reporting: You’ll receive easy-to-understand, real-time performance reports to track your return on investment.",
+  "Customized Campaigns: We don’t believe in one-size-fits-all. Our strategies are tailored specifically to your business goals and target audience.",
+  "End-to-End Support: From consultation to campaign execution and beyond, we stay with you at every stage of the marketing journey.",
 ];
 
-const DigitalMarketingchooseus = () => {
+const DigitalMarketingChooseUs = () => {
   return (
-    <>
-      <Box w="100%">
-        <Box
-          maxW="1200px"
-          w="100%"
-          mx="auto"
-          py={{ base: 8, md: 16 }}
-          px={{ base: 4, md: 6 }}
-          display="flex"
-          flexDirection="column"
-       
-        >
-          <Text fontSize={{ base: "1.5rem", md: "2rem" }} fontWeight={"700"}>
-            Digital Marketing, Done Right
-          </Text>
-         
-          <Grid
-            w="100%"
-            h={{base:'auto',md:'300px'}}
-            gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(3,1fr)" }}
-            gap={6}
-            mt='100px'
+    <Box w="100%" bg="gray.50" py={{ base: 10, md: 20 }}>
+      <Flex
+        maxW="1200px"
+        mx="auto"
+        direction={{ base: "column", md: "row" }}
+        px={{ base: 4, md: 8 }}
+        gap={{ base: 10, md: 16 }}
+        align="flex-start"
+      >
+        {/* Left Side – Title and Intro Paragraph */}
+        <Box flex="1" bg={theme.colors.ten} color='black'>
+          <Text
+            fontSize={{ base: "2xl", md: "3xl" }}
+            fontWeight="bold"
+            mb={4}
           >
-            {whyChooseUs.map((point, index) => {
-              return (
-                <GridItem
-                  key={index}
-                  display="flex"
-                  alignItems="center"
-                  colSpan={1}
-                >
-                  <Box
-                    position="relative"
-                    w="70px"
-                    h="70px"
-                    borderRadius="50%"
-                    border='2px solid black'
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    zIndex={2}
-                  >
-                    {point.icon}
-                  
-                    <Box
-                      position="absolute"
-                      w="300px"
-                      h="300px"
-                      bg={theme.colors.thirty}
-                      borderRadius="50%"
-                      left='75%'
-                      display={'flex'}
-                      alignItems={'center'}
-                      justifyContent={'center'}
-                      flexDirection={'column'}
-                      textAlign={'center'}
-                      wordBreak={'true'}
-                      px='20px'
-                      zIndex={1}
-                      gap={6}
-                    >
-                        <Text fontSize={'xl'} fontWeight={500}>{point.title}</Text>
-                         <Text fontSize={'0.8rem'}>{point.description}</Text>
-
-                    </Box>
-                  </Box>
-                </GridItem>
-              );
-            })}
-          </Grid>
+            Why Choose Us
+          </Text>
+          <Text fontSize={{ base: "md", md: "lg" }}  mb={4}>
+            In today's competitive digital space, choosing the right marketing partner
+            can make or break your business growth. We combine creativity, technology,
+            and data to provide tailored digital solutions that actually work.
+          </Text>
+          <Text fontSize={{ base: "md", md: "lg" }} >
+            Whether you're a startup or a well-established brand, our mission is to
+            help you achieve sustained visibility, engagement, and results across
+            every digital platform.
+          </Text>
         </Box>
-      </Box>
-    </>
+
+        {/* Right Side – Key Benefits List */}
+        <Box flex="1">
+          <UnorderedList
+            spacing={5}
+            fontSize={{ base: "md", md: "lg" }}
+            color="gray.800"
+            pl={4}
+          >
+            {whyChooseUsPoints.map((point, index) => (
+              <ListItem key={index}>{point}</ListItem>
+            ))}
+          </UnorderedList>
+        </Box>
+      </Flex>
+    </Box>
   );
 };
 
-export default DigitalMarketingchooseus;
+export default DigitalMarketingChooseUs;
