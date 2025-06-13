@@ -21,6 +21,8 @@ import LoginPage from "../Components/Admin/LoginPage";
 import EditWorkshop from "../Components/Admin/EditWorkshop";
 import Privateroute from "./Privateroute";
 import PagenotFound from "../pages/PagenotFound";
+import Webdev from "../pages/Services/Webdev/Webdev";
+import DigitalMarketing from "../pages/Services/DigitalMarketing/DigitalMarketing";
 
 
 const Allrouts = () => {
@@ -37,6 +39,8 @@ const Allrouts = () => {
             <Route path='/footer' element={<Footer/>}/>
             <Route path='/products' element={<Product/>}/>
             <Route path='/productsinglepage/:id' element={<ProductSinglepage/>}/>
+            <Route path='/webdevelopment' element={<Webdev/>}/>
+             <Route path='/digitalmarketing' element={<DigitalMarketing/>}/>
             <Route path='*' element={<PagenotFound/>}/>
             </Route>
 

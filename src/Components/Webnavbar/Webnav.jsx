@@ -65,7 +65,7 @@ const Webnav = () => {
         w="100%"
         top="0"
        
-        zIndex="10"
+        zIndex="25"
         transition="position 0.3s ease-in-out"
         display={open ? "none" : "block"} // Hide navbar when drawer is open
         
