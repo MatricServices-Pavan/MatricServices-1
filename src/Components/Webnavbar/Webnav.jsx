@@ -72,7 +72,7 @@ const Webnav = () => {
         w="100%"
         top="0"
        
-        zIndex="10"
+        zIndex="25"
         transition="position 0.3s ease-in-out"
         display={open ? "none" : "block"} // Hide navbar when drawer is open
         
@@ -146,7 +146,6 @@ const Webnav = () => {
               >
               <HStack spacing={2} alignItems="center">
                 <FaWhatsapp fontSize="1.5rem" cursor="pointer" />
-                <Text fontSize="0.65rem">Chat <br/> Now</Text>
               </HStack>
               </a>
             </Box>
@@ -191,8 +190,6 @@ const Webnav = () => {
         fontWeight="700"
         textTransform="uppercase"
         fontSize="0.8rem"
-        _hover={{ bg: "gray.100" }}
-        _active={{ bg: "gray.200" }}
         transition="all 0.2s ease"
         borderRadius="md"
         px={4}
@@ -211,6 +208,63 @@ const Webnav = () => {
         zIndex={1000}
         overflow="hidden"
       >
+        
+      
+
+          <NavLink to="/webdevelopment" style={navLinkStyle}>
+          <MenuItem
+            fontWeight="700"
+            textTransform="uppercase"
+            fontSize="0.8rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={4}
+            py={2}
+            mx={0}
+            onClick={onClose} // Close the menu on click
+          >
+             Web Development
+          </MenuItem>
+        </NavLink>
+
+          <NavLink to="/appDev" style={navLinkStyle}>
+          <MenuItem
+            fontWeight="700"
+            textTransform="uppercase"
+            fontSize="0.8rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={4}
+            py={2}
+            mx={0}
+            onClick={onClose} // Close the menu on click
+          >
+            App Development
+          </MenuItem>
+        </NavLink>
+
+          <NavLink to="/digitalmarketing" style={navLinkStyle}>
+          <MenuItem
+            fontWeight="700"
+            textTransform="uppercase"
+            fontSize="0.8rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={4}
+            py={2}
+            mx={0}
+            onClick={onClose} // Close the menu on click
+          >
+            Digital Marketing
+          </MenuItem>
+        </NavLink>
+
         <NavLink to="/workshop" style={navLinkStyle}>
           <MenuItem
             fontWeight="700"
@@ -228,7 +282,8 @@ const Webnav = () => {
             Workshops
           </MenuItem>
         </NavLink>
-        <NavLink to="/projects" style={navLinkStyle}>
+
+          <NavLink to="/projects" style={navLinkStyle}>
           <MenuItem
             fontWeight="700"
             textTransform="uppercase"
@@ -245,96 +300,7 @@ const Webnav = () => {
             Projects
           </MenuItem>
         </NavLink>
-        <Menu closeOnSelect={false} placement="right-start">
-          {({ isOpen }) => (
-            <>
-              <MenuButton
-                onClick={(e) => e.stopPropagation()}
-                fontWeight="700"
-                textTransform="uppercase"
-                fontSize="0.8rem"
-                _hover={{ bg: "gray.100" }}
-                _focus={{ bg: "gray.200" }}
-                transition="all 0.2s ease"
-                borderRadius="md"
-                px={4}
-                py={2}
-                mx={0}
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-              >
-                <HStack justify="space-between" w="full">
-                  <Text>Software Development</Text>
-                  {isOpen ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                </HStack>
-              </MenuButton>
-              <MenuList
-                bg="white"
-                border="1px solid"
-                borderColor="gray.200"
-                borderRadius="lg"
-                boxShadow="lg"
-                py={1}
-                minW="200px"
-                zIndex={1001}
-                overflow="hidden"
-              >
-                <NavLink to="/webDev" style={navLinkStyle}>
-                  <MenuItem
-                    fontWeight="700"
-                    textTransform="uppercase"
-                    fontSize="0.8rem"
-                    _hover={{ bg: "gray.100" }}
-                    _focus={{ bg: "gray.200" }}
-                    transition="all 0.2s ease"
-                    borderRadius="md"
-                    px={4}
-                    py={2}
-                    mx={0}
-                    onClick={onClose} // Close the parent menu on click
-                  >
-                    Web Development
-                  </MenuItem>
-                </NavLink>
-                <NavLink to="/appDev" style={navLinkStyle}>
-                  <MenuItem
-                    fontWeight="700"
-                    textTransform="uppercase"
-                    fontSize="0.8rem"
-                    _hover={{ bg: "gray.100" }}
-                    _focus={{ bg: "gray.200" }}
-                    transition="all 0.2s ease"
-                    borderRadius="md"
-                    px={4}
-                    py={2}
-                    mx={0}
-                    onClick={onClose} // Close the parent menu on click
-                  >
-                    App Development
-                  </MenuItem>
-                </NavLink>
-                <NavLink to="/digitalMarketing" style={navLinkStyle}>
-                  <MenuItem
-                    fontWeight="700"
-                    textTransform="uppercase"
-                    fontSize="0.8rem"
-                    _hover={{ bg: "gray.100" }}
-                    _focus={{ bg: "gray.200" }}
-                    transition="all 0.2s ease"
-                    borderRadius="md"
-                    px={4}
-                    py={2}
-                    mx={0}
-                    onClick={onClose} // Close the parent menu on click
-                  >
-                    Digital Marketing
-                  </MenuItem>
-                </NavLink>
-              </MenuList>
-            </>
-          )}
-        </Menu>
+        
       </MenuList>
     </>
   )}
@@ -454,7 +420,64 @@ const Webnav = () => {
         zIndex={1000}
         overflow="hidden"
       >
-        <NavLink to="/workshop" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+       
+      
+
+        <NavLink to="/webdevelopment" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+          <MenuItem
+            fontWeight={500}
+            textTransform="uppercase"
+            fontSize="1rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={3}
+            py={2}
+            mx={0}
+            pl={6}
+          >
+            Web Development
+          </MenuItem>
+        </NavLink>
+
+        <NavLink to="/appDev" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+          <MenuItem
+            fontWeight={500}
+            textTransform="uppercase"
+            fontSize="1rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={3}
+            py={2}
+            mx={0}
+            pl={6}
+          >
+            App Development
+          </MenuItem>
+        </NavLink>
+
+        <NavLink to="/digitalmarketing" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+          <MenuItem
+            fontWeight={500}
+            textTransform="uppercase"
+            fontSize="1rem"
+            _hover={{ bg: "gray.100" }}
+            _focus={{ bg: "gray.200" }}
+            transition="all 0.2s ease"
+            borderRadius="md"
+            px={3}
+            py={2}
+            mx={0}
+            pl={6}
+          >
+            Digital Marketing
+          </MenuItem>
+        </NavLink>
+
+         <NavLink to="/workshop" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
           <MenuItem
             fontWeight={500} // Match other nav items
             textTransform="uppercase" // Match other nav items
@@ -471,7 +494,9 @@ const Webnav = () => {
             Workshops
           </MenuItem>
         </NavLink>
-        <NavLink to="/projects" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
+
+
+          <NavLink to="/projects" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
           <MenuItem
             fontWeight={500}
             textTransform="uppercase"
@@ -488,97 +513,7 @@ const Webnav = () => {
             Projects
           </MenuItem>
         </NavLink>
-        <Menu closeOnSelect={false} placement="bottom-start">
-          {({ isOpen: isNestedOpen }) => (
-            <>
-              <MenuButton
-                onClick={(e) => e.stopPropagation()}
-                fontWeight={500}
-                textTransform="uppercase"
-                fontSize="1rem"
-                _hover={{ bg: "gray.100" }}
-                _focus={{ bg: "gray.200" }}
-                transition="all 0.2s ease"
-                borderRadius="md"
-                px={3}
-                py={2}
-                mx={0}
-                pl={6}
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-              >
-                <HStack justify="space-between" w="full">
-                  <Text>Software Development</Text>
-                  {isNestedOpen ? <ChevronDownIcon /> : <ChevronRightIcon />}
-                </HStack>
-              </MenuButton>
-              <MenuList
-                bg="white"
-                border="1px solid"
-                borderColor="gray.200"
-                borderRadius="lg"
-                boxShadow="lg"
-                py={1}
-                minW="180px"
-                zIndex={1001}
-                overflow="hidden"
-              >
-                <NavLink to="/webDev" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
-                  <MenuItem
-                    fontWeight={500}
-                    textTransform="uppercase"
-                    fontSize="0.9rem"
-                    _hover={{ bg: "gray.100" }}
-                    _focus={{ bg: "gray.200" }}
-                    transition="all 0.2s ease"
-                    borderRadius="md"
-                    px={3}
-                    py={1.5}
-                    mx={0}
-                    pl={10} // Further indent for nested items
-                  >
-                    Web Development
-                  </MenuItem>
-                </NavLink>
-                <NavLink to="/appDev" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
-                  <MenuItem
-                    fontWeight={500}
-                    textTransform="uppercase"
-                    fontSize="0.9rem"
-                    _hover={{ bg: "gray.100" }}
-                    _focus={{ bg: "gray.200" }}
-                    transition="all 0.2s ease"
-                    borderRadius="md"
-                    px={3}
-                    py={1.5}
-                    mx={0}
-                    pl={10}
-                  >
-                    App Development
-                  </MenuItem>
-                </NavLink>
-                <NavLink to="/digitalMarketing" style={navLinkStyle} onClick={() => { toggleNav(); onClose(); }}>
-                  <MenuItem
-                    fontWeight={500}
-                    textTransform="uppercase"
-                    fontSize="0.9rem"
-                    _hover={{ bg: "gray.100" }}
-                    _focus={{ bg: "gray.200" }}
-                    transition="all 0.2s ease"
-                    borderRadius="md"
-                    px={3}
-                    py={1.5}
-                    mx={0}
-                    pl={10}
-                  >
-                    Digital Marketing
-                  </MenuItem>
-                </NavLink>
-              </MenuList>
-            </>
-          )}
-        </Menu>
+       
       </MenuList>
     </>
   )}
