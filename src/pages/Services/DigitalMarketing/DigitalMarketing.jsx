@@ -9,7 +9,7 @@ const DigitalMarketing = () => {
     <>
     <DigitalMarketingHero/>
     <DigitalMarketingServices/>
-        <DigitalMarketingclients/>
+    {/* <DigitalMarketingclients/> */}
     <DigitalMarketingchooseus/>
 
     <Projectform/>

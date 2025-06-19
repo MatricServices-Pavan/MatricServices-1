@@ -27,8 +27,37 @@ const Homesec2 = () => {
 
       {/* Services */}
       <SimpleGrid columns={[1, 2, 3, 3]} mt={"2rem"} spacing={5}>
+
         {/* service1 */}
 
+                <Box
+          bg={theme.colors.thirty}
+          p="30px 30px"
+          height="auto"
+          display={"flex"}
+          flexDirection={"column"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          color="black"
+          textAlign={"center"}
+          gap="10px"
+          _hover={{ transform: "scale(1.05)", transition: "all 0.3s ease-out" }}
+        >
+          <Box fontSize={"2.5rem"}>
+            <MdDevices /> {/* Icon for both web and app development */}
+          </Box>
+          <Text fontSize="1.5rem" lineHeight="1" fontWeight={"400"}>
+            Web & App Development
+          </Text>
+          <Text fontSize={"0.8rem"}>
+            We craft high-performance websites and mobile applications tailored
+            to your business needs—ensuring seamless user experiences across all
+            platforms.
+          </Text>
+        </Box>
+
+
+        {/* service2 */}
         <Box
           bg={theme.colors.ten}
           p="30px 30px"
@@ -52,34 +81,6 @@ const Homesec2 = () => {
             We help you grow your online presence through SEO, social media
             campaigns, and targeted strategies that drive traffic and increase
             conversions.
-          </Text>
-        </Box>
-
-        {/* service2 */}
-
-        <Box
-          bg={theme.colors.thirty}
-          p="30px 30px"
-          height="auto"
-          display={"flex"}
-          flexDirection={"column"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          color="black"
-          textAlign={"center"}
-          gap="10px"
-          _hover={{ transform: "scale(1.05)", transition: "all 0.3s ease-out" }}
-        >
-          <Box fontSize={"2.5rem"}>
-            <MdDevices /> {/* Icon for both web and app development */}
-          </Box>
-          <Text fontSize="1.5rem" lineHeight="1" fontWeight={"400"}>
-            Web & App Development
-          </Text>
-          <Text fontSize={"0.8rem"}>
-            We craft high-performance websites and mobile applications tailored
-            to your business needs—ensuring seamless user experiences across all
-            platforms.
           </Text>
         </Box>
 
