@@ -29,6 +29,7 @@ const Webdevchooseus = () => {
         maxW={"1200px"}
         w="100%"
         py="5"
+        mb={{base:'none',md:3,lg:5}}
         mx="auto"
         display={"flex"}
         alignItems={"center"}
@@ -41,13 +42,14 @@ const Webdevchooseus = () => {
           alignItems="center"
           flexDirection={"column"}
         >
-          <Text fontSize={{ base: "1.5rem", md: "2rem" }} fontWeight={"700"}>
+          <Text fontSize={{ base: "1.5rem", md: "2rem" }} fontWeight={"700"} >
             Why choose us?
           </Text>
           <Text
             fontSize={{ base: "0.8rem", md: "1.2rem" }}
             fontWeight={"500"}
             color={theme.colors.ten}
+            mb={3}
           >
             Pixel-perfect designs backed by robust development.
           </Text>
@@ -58,7 +60,7 @@ const Webdevchooseus = () => {
             justifyContent={"center"}
             mt={5}
             flexDirection="column"
-            gap={{ base: "20px", md: "10px" }}
+            gap={{ base: "20px", md: "20px" }}
           >
             {points.map((point) => {
               return (
@@ -73,7 +75,6 @@ const Webdevchooseus = () => {
                     <Box
                       w={{ base: "100%", md: "30%" }}
                       h="150px"
-                      position="relative"
                     >
                       <Image
                         src={point.img}
@@ -95,11 +96,12 @@ const Webdevchooseus = () => {
                       <Text
                         fontWeight={500}
                         fontSize={{ base: "1.2rem", md: "1.5rem" }}
+                        
                       >
                         {point.reason}
                       </Text>
                       <Box as="hr" w="100%" h="0.02rem" bg="gray" />
-                      <Text w="95%" fontSize={{ base: "0.8rem", lg: "1rem" }} mt='10px'>
+                      <Text w="95%" fontSize={{ base: "0.8rem", lg: "1rem" }} mt='10px' textAlign={'justify'}>
                         {point.des}
                       </Text>
                     </Box>

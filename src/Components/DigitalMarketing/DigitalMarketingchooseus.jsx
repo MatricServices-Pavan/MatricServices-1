@@ -15,9 +15,9 @@ const DigitalMarketingChooseUs = () => {
       <Flex
         maxW="1200px"
         mx="auto"
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column", md: "column",lg:'row' }}
         px={{ base: 4, md: 8 }}
-        gap={{ base: 10, md: 16 }}
+        gap={{ base: 10, md: 10 ,lg:10,xl:16}}
         align="flex-start"
       >
         {/* Left Side – Title and Intro Paragraph */}
@@ -27,7 +27,7 @@ const DigitalMarketingChooseUs = () => {
             fontWeight="bold"
             mb={4}
           >
-            Why Choose Us
+            Why Us?
           </Text>
           <Text fontSize={{ base: "md", md: "lg" }}  mb={4}>
             In today's competitive digital space, choosing the right marketing partner

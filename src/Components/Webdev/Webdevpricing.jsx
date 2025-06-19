@@ -11,6 +11,14 @@ import {
 import React from "react";
 import theme from "../../theme";
 
+const handleClick=()=>{
+    let message = `Hello! 👋\nThank you for contacting us `;
+        const whatsappMessage = `https://api.whatsapp.com/send?phone=919390555433&text=${encodeURIComponent(
+          message
+        )}`;
+        window.open(whatsappMessage, "_blank")
+}
+
 const Webdevpricing = () => {
   const pricingtable = [
     {
@@ -19,7 +27,7 @@ const Webdevpricing = () => {
       price: " ₹4,999",
       des: "Perfect for individuals looking to launch a simple and clean website to showcase basic information online",
       benefits: [
-        "1-3 Static Pages (Home, About, Contact)",
+        "1-3 Static Pages(Home,contact,About)",
         "Mobile-Responsive Design",
         "Contact Form Integration",
         "Basic SEO Setup",
@@ -90,17 +98,19 @@ const Webdevpricing = () => {
             clients
           </Text>
           <Grid
-            w={{base:'100%',md:'100%',lg:'95%',xl:'90%'}}
+            w={{base:'98%',md:'100%',lg:'95%',xl:'90%'}}
             gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)" ,lg:'repeat(3,1fr)'}}
-            gap={{base:'10px',md:'30px',lg:'40px',xl:'50px'}}
+            gap={{base:'30px',md:'20px',lg:'40px',xl:'50px'}}
             mt={5}
+          
             
           >
             {pricingtable.map((plan) => {
               return (
                 <>
-                  <GridItem colSpan={"1"}>
+                  <GridItem colSpan={"1"} w='100%' display={'flex'} alignItems={'center'} justifyContent={'center'} flexDirection={'column'}>
                     <VStack
+                      w={{base:'88%',md:'100%'}}
                       color={plan.id % 2 === 0 ? "black" : "white"}
                       bg={
                         plan.id % 2 === 0
@@ -108,7 +118,7 @@ const Webdevpricing = () => {
                           : theme.colors.ten
                       }
                       p={{ base: "20px", md: "30px" }}
-                      borderRadius={{base:'0',md:'0',lg:'15%'}}
+                      borderRadius={{base:'15%',md:'15%',lg:'15%'}}
                       textAlign={"center"}
                       gap={4}
                     >
@@ -135,6 +145,7 @@ const Webdevpricing = () => {
                           transform: "scale(1.05)",
                           transition: "all 0.3s ease-in-out",
                         }}
+                        onClick={handleClick}
                       >
                         Book Now
                       </Box>

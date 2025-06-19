@@ -2,6 +2,14 @@ import React from "react";
 import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import theme from '../../theme'
+
+const handleClick=()=>{
+    let message = `Hello! 👋\nThank you for contacting us `;
+        const whatsappMessage = `https://api.whatsapp.com/send?phone=919390555433&text=${encodeURIComponent(
+          message
+        )}`;
+        window.open(whatsappMessage, "_blank")
+}
 const DigitalMarketingHero = () => {
   const headingFontSize = useBreakpointValue({
     base: "2xl",
@@ -63,6 +71,7 @@ const DigitalMarketingHero = () => {
             transform: "scale(1.05)",
             transition: "all 0.3s ease-in-out",
           }}
+          onClick={handleClick}
         >
           Explore Our Services
         </Box>
