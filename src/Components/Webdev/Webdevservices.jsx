@@ -18,6 +18,14 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+
+const handleClick=()=>{
+    let message = `Hello! 👋\nThank you for contacting us `;
+        const whatsappMessage = `https://api.whatsapp.com/send?phone=919390555433&text=${encodeURIComponent(
+          message
+        )}`;
+        window.open(whatsappMessage, "_blank")
+}
 const Webdevservices = () => {
   const websitetypes = [
     {
@@ -81,18 +89,19 @@ const Webdevservices = () => {
             fontSize={{ base: "0.8rem", md: "1.2rem" }}
             fontWeight={"500"}
             color={theme.colors.ten}
+            mb={3}
           >
             Explore the Various Website Designs We Build for You
           </Text>
-          <Grid w='100%' templateColumns={{base:'repeat(2,1fr)',md:'repeat(3,1fr)'}} gap={{base :3,md:4,lg:6}} mt={5}>
+          <Grid w='98%'  templateColumns={{base:'repeat(2,1fr)',md:'repeat(2,1fr)',lg:'repeat(3,1fr)'}} gap={{base :3,md:4,lg:6}} mt={5}>
           {websitetypes.map((type) => {
             return (
 
               <>
               <GridItem colSpan={'1'}>
                 <Card
-                  boxShadow={"xl"}
-                  p={{base:'5px',md:'30px'}}
+                  boxShadow={"md"}
+                  p={{base:'8px',md:'30px'}}
                    h='100%'
                   _hover={{
                     transform: "scale(1.1)",
@@ -102,7 +111,7 @@ const Webdevservices = () => {
                 >
                   <CardBody>
                     <HStack mb="6" gap="3">
-                      <Box w={{base:'40px',md:'50px'}} h={{base:'40px',md:'50px'}} >
+                      <Box w={{base:'30px',md:'50px'}} h={{base:'30px',md:'50px'}} >
                         <Image
                           src={type.img}
                           w="100%"
@@ -113,31 +122,34 @@ const Webdevservices = () => {
                         <Box name="Nate Foss" />
                       </Box>
                       <Stack gap="0">
-                        <Text fontWeight="semibold" textStyle="sm">
+                        <Text fontWeight="semibold" textStyle="sm" fontSize={{base:'0.95rem'}}>
                           {type.title}
                         </Text>
                       </Stack>
                     </HStack>
-                    <Text mt="-1" fontSize={{base:'0.8rem',md:'1rem'}} h='100px'> {type.des}</Text>
+                    <Text mt={{base:'-10px'}} fontSize={{base:'0.6rem',md:'1rem'}} textAlign={'justify'} h={{base:'auto',md:'100px'}}> {type.des}</Text>
                   </CardBody>
                   <CardFooter display={'flex'} justifyContent={'flex-start'} position={'relative'}>
                     
                     <Button
                       
-                      color="white"
+                      color={{base:'black',md:'white'}}
                       mt={{ base: "10px", md: "20px", lg: "30px" }}
                       fontSize={{ base: "0.8rem" }}
-                      bg="#3b3b3b"
+                      bg={{base:'none',md:'#3b3b3b'}}
+                      fontWeight={'500'}
                       w="max-content"
                       textAlign="center"
                        whiteSpace="normal"
-                      p={{ base: "5px 15px" }}
-                      borderRadius='5px'
+                      p={{ base: "4px 12px" }}
+                      borderRadius={{base:'none',md:'5px'}}
                       cursor={"pointer"}
                       _hover={{
                         transform: "scale(1.05)",
                         transition: "all 0.3s ease-in-out",
                       }}
+                      border='1px solid #3b3b3b'
+                      onClick={handleClick}
                     >
                       Get Started
                     </Button>

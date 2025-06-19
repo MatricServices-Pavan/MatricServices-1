@@ -127,12 +127,12 @@ const Webnav = () => {
             </HStack>
 
             {/* WhatsApp Button */}
-            <Box
+            {/* <Box
               w="max-content"
               borderRadius="30px"
               p="5px 15px"
               bg={'#25D366'}
-              display={{ base: "flex", lg: "flex" }} // Show in both mobile and desktop
+              display={{ base: "flex", lg: "flex" }} 
               alignItems="center"
               justifyContent="center"
               gap="5px"
@@ -148,7 +148,7 @@ const Webnav = () => {
                 <FaWhatsapp fontSize="1.5rem" cursor="pointer" />
               </HStack>
               </a>
-            </Box>
+            </Box> */}
             </HStack>
 
             {/* Desktop View */}
@@ -311,7 +311,7 @@ const Webnav = () => {
             </Box>
 
             {/* WhatsApp Button for Desktop */}
-            <Box
+            {/* <Box
               w="20%"
               display="flex"
               alignItems="center"
@@ -340,7 +340,7 @@ const Webnav = () => {
                   </HStack>
                 </a>
               </Box>
-            </Box>
+            </Box> */}
           </Box>
         </HStack>
       </Box>
