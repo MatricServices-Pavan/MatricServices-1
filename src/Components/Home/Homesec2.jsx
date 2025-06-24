@@ -31,14 +31,14 @@ const Homesec2 = () => {
         {/* service1 */}
 
                 <Box
-          bg={theme.colors.thirty}
+          bg={theme.colors.ten}
           p="30px 30px"
           height="auto"
           display={"flex"}
           flexDirection={"column"}
           alignItems={"center"}
           justifyContent={"center"}
-          color="black"
+          color="white"
           textAlign={"center"}
           gap="10px"
           _hover={{ transform: "scale(1.05)", transition: "all 0.3s ease-out" }}
@@ -59,14 +59,14 @@ const Homesec2 = () => {
 
         {/* service2 */}
         <Box
-          bg={theme.colors.ten}
+          bg={theme.colors.thirty}
           p="30px 30px"
           height="auto"
           display={"flex"}
           flexDirection={"column"}
           alignItems={"center"}
           justifyContent={"center"}
-          color="white"
+          color="black"
           textAlign={"center"}
           gap="10px"
           _hover={{ transform: "scale(1.05)", transition: "all 0.3s ease-out" }}

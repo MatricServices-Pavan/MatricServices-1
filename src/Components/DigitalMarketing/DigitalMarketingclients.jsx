@@ -3,10 +3,13 @@ import React from "react";
 import theme from "../../theme";
 import client1 from "../../assets/client1.jpeg";
 import client2 from "../../assets/client2.jpeg";
-import client3 from "../../assets/client3.jpeg";
+import client3 from "../../assets/client3.jpg";
+import client4 from "../../assets/client4.jpg";
+import client5 from "../../assets/client5.jpg";
+import client6 from "../../assets/client6.jpg";
 
 const DigitalMarketingClients = () => {
-  const clients = [client1, client2, client3, client1, client2, client3];
+  const clients = [client1, client2, client3, client4, client5, client6];
   // Duplicate the array to create seamless loop
   const duplicatedClients = [...clients, ...clients];
 
