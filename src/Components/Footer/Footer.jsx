@@ -268,7 +268,7 @@ const Footer = () => {
               <SocialIcon
                 url='https://www.linkedin.com'
                 as="a"
-                href="https://www.instagram.com/matric_services/profilecard/?igsh=eDRtMDZqZzFjZXpv"
+                href="https://www.linkedin.com/company/matricservices/"
                 aria-label={FaLinkedin}
                 icon={<FaLinkedin />}
                 style={{width:40,height:40}}
