@@ -192,7 +192,7 @@ const Projectform = () => {
               <Input
                 type="text"
                 name="CollegeOrInstitute"
-                placeholder="College/Institute"
+                placeholder="Organisation"
                 value={formdata.CollegeOrInstitute}
                 w="100%"
                 onChange={handleFormdata}
