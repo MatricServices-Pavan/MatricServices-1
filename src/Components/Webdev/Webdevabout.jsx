@@ -7,7 +7,7 @@ import theme from "../../theme";
 
 
 const handleClick=()=>{
-    let message = `Hello! 👋\nThank you for contacting us `;
+    let message = `Hello`;
         const whatsappMessage = `https://api.whatsapp.com/send?phone=919390555433&text=${encodeURIComponent(
           message
         )}`;
