@@ -12,7 +12,7 @@ import React from "react";
 import theme from "../../theme";
 
 const handleClick = () => {
-  let message = `Hello`;
+  let message = `Hello! 👋\nThank you for contacting us `;
   const whatsappMessage = `https://api.whatsapp.com/send?phone=919390555433&text=${encodeURIComponent(
     message
   )}`;
@@ -27,10 +27,11 @@ const Webdevpricing = () => {
       price: " ₹9,999",
       des: "Perfect for individuals looking to launch a simple and clean website.",
       benefits: [
-        "Static Page(Home,contact,About)",
+        "1-3 Static Pages(Home,contact,About)",
         "Mobile-Responsive Design",
         "Contact Form Integration",
         "Basic SEO Setup",
+        "1 Month Maintenance Support",
       ],
       idealfor: "Individuals & Students",
     },
@@ -40,11 +41,11 @@ const Webdevpricing = () => {
       price: " ₹19,999",
       des: "Ideal for small businesses that need a professional and functional features.",
       benefits: [
-        "Up to 3 Pages with Custom Design",
+        "Up to 6 Pages with Custom Design",
         "Responsive & Modern Layout,WhatsApp/Email Integration",
         "Inquiry/Contact Forms",
         "SEO Optimized",
-        "1 Months Maintenance Support",
+        "3 Months Maintenance Support",
       ],
       idealfor: "Startups, Freelancers, Consultants",
     },
@@ -55,9 +56,10 @@ const Webdevpricing = () => {
       des: "Best for brands needing a dynamic site with advanced features, optimization, are included",
       benefits: [
         "Dynamic Product Pages",
-        "Payment Gateway Integration(Optional)",
+        "Payment Gateway Integration",
+        "Admin Panel for Product Management",
         "Mobile Optimization",
-        "2 Months Maintenance Support",
+        "6 Months Maintenance Support",
       ],
       idealfor: "Online Stores, Small Shops, Boutique Brands",
     },
