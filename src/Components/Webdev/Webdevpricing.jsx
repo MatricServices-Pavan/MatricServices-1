@@ -1,14 +1,4 @@
-import {
-  Box,
-  Button,
-  Grid,
-  GridItem,
-  List,
-  ListItem,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import React from "react";
+import { Box, Grid, GridItem, List, ListItem, Text } from "@chakra-ui/react";
 import theme from "../../theme";
 
 const handleClick = () => {
@@ -27,11 +17,10 @@ const Webdevpricing = () => {
       price: " ₹9,999",
       des: "Perfect for individuals looking to launch a simple and clean website.",
       benefits: [
-        "1-3 Static Pages(Home,contact,About)",
+        "Static Page(Home,contact,About)",
         "Mobile-Responsive Design",
         "Contact Form Integration",
         "Basic SEO Setup",
-        "1 Month Maintenance Support",
       ],
       idealfor: "Individuals & Students",
     },
@@ -41,11 +30,11 @@ const Webdevpricing = () => {
       price: " ₹19,999",
       des: "Ideal for small businesses that need a professional and functional features.",
       benefits: [
-        "Up to 6 Pages with Custom Design",
+        "Up to 3 Pages with Custom Design",
         "Responsive & Modern Layout,WhatsApp/Email Integration",
         "Inquiry/Contact Forms",
         "SEO Optimized",
-        "3 Months Maintenance Support",
+        "1 Months Maintenance Support",
       ],
       idealfor: "Startups, Freelancers, Consultants",
     },
@@ -59,7 +48,7 @@ const Webdevpricing = () => {
         "Payment Gateway Integration",
         "Admin Panel for Product Management",
         "Mobile Optimization",
-        "6 Months Maintenance Support",
+        "2 Months Maintenance Support",
       ],
       idealfor: "Online Stores, Small Shops, Boutique Brands",
     },
